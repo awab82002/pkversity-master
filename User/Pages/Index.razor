@@ -1,0 +1,114 @@
+@page "/"
+@using ClassLibraryDAL
+@using ClassLibraryEntities
+@inject IJSRuntime js
+
+@using User.Authentication
+@inject AuthenticationStateProvider authStateProvider
+@inject NavigationManager nm
+<style>
+    .navbar{
+        display:none;
+    }
+    .footer{
+        display:none;
+    }
+    body{
+        background: #fff;
+       
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 110%;
+    }
+
+    #hero {
+        width: 100%;
+        height: 75vh;
+        background: url("Images/hero.jpg") top left;
+        background-size: cover;
+        position: relative;
+    }
+
+        #hero:before {
+            content: "";
+            background: rgba(255, 255, 255, 0.6);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #hero .container {
+            position: relative;
+        }
+
+        #hero h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 56px;
+            color: #222222;
+            font-family: "Poppins", sans-serif;
+        }
+
+            #hero h1 span {
+                color: #106eea;
+            }
+
+        #hero h2 {
+            color: #555555;
+            margin: 5px 0 30px 0;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+</style>
+
+
+<section id="hero" class="d-flex align-items-center">
+    <div class="container">
+        <img src="Images/img1.png" height="80"> 
+        <h1>Welcome to <span>Dream Universities</span></h1>
+        <h2>
+            So, why wait? Start your search for your dream university today and take the first step towards your academic and professional success.
+        </h2>
+        <div class="d-flex">
+            <a href="search" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
+    </div>
+</section><!-- End Hero -->
+<!-- ======= Clients Section ======= -->
+<section id="clients" class="clients section-bg">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="Images/air.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="Images/Comsat.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="Images/fast.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="Images/islamic.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="Images/pieas.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="Images/nust.png" class="img-fluid" alt="">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+@code {
+
+
+}
